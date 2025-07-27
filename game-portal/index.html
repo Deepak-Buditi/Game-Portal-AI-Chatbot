@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Portal with AI Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-title">🎮 Game Portal</div>
+  </nav>
+
+  <!-- Subheader -->
+  <header class="site-header">
+    Select a game to play or chat with your assistant!
+  </header>
+
+  <!-- Game Browser -->
+  <main class="container">
+    <section class="controls">
+      <input type="search" id="search-input" placeholder="Search games..." />
+      <select id="theme-select">
+        <option value="all">All Themes</option>
+        <option value="action">Action</option>
+        <option value="puzzle">Puzzle</option>
+        <option value="logic">Logic</option>
+        <option value="classic">Classic</option>
+      </select>
+      <button id="search-btn">Search</button>
+    </section>
+
+    <section id="games-grid" class="games-grid"></section>
+  </main>
+
+  <!-- Game Player -->
+  <div id="player" class="player hidden">
+    <div class="player-header">
+      <button id="back-btn">← Back</button>
+      <h2 id="game-name"></h2>
+    </div>
+    <iframe id="game-frame" src="" title="Game Frame"></iframe>
+  </div>
+
+  <!-- Chatbot Button -->
+  <div id="chatbot-btn" title="Chat with Assistant">
+    <!-- Modern SVG icon -->
+    <svg height="24" viewBox="0 0 24 24" width="24" fill="white">
+      <path d="M2 2v20l4-4h14V2H2zm16 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+    </svg>
+  </div>
+
+  <!-- Chatbot Window -->
+  <div id="chatbot-widget" class="hidden">
+    
+    <div id="chat-header">
+      AI Chatbot <span id="close-chat">×</span>
+    </div>
+    <div id="chat-log"></div>
+    <div id="chat-controls">
+      <input type="text" id="chat-input" placeholder="Ask something..." />
+      <button id="chat-send">➤</button>
+      <button id="chat-voice">🎤</button>
+    </div>
+  </div>
+  
+  <div id="chat-greeting">Hi, I'm De-R1! Need any assistance?</div>
+
+
+
+  <footer class="footer">
+    © 2025 Game Portal | Designed by You
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
